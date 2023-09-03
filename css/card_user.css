@@ -14,7 +14,7 @@ form{
     align-items: center;
 
 }
-input{
+input,select{
     width: 80%;
     height: 35px;
     border-radius: 10px;
@@ -37,7 +37,7 @@ label{
     font-weight: 600;
     width: 80%;
     text-align: start;
-    font-size: 10px;
+    font-size: 15px;
 
 }
 button{

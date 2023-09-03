@@ -17,7 +17,7 @@
         <label for="cpf">
             cpf(apenas número)
         </label>
-        <input type="text"name = "cpf" placeholder = "00000000000">
+        <input type="text"name = "cpf">
         <label for="email">
             email
         </label>
@@ -30,6 +30,11 @@
             quantidade de dias
         </label>
         <input type="number" name = "qtd_dias">
+        <label for="func">Função do Usuário</label>
+        <select name="func" id="">
+            <option value="0">Usuário</option>
+            <option value="1">Administrador</option>
+        </select>
         <button type="submit">
             cadastrar
         </button>
