@@ -10,12 +10,17 @@
 <body>
     <section>
         <div class="slide">
-            <img src="img/background.jpg" alt="" class="background">
+            <img src="img/background1.jpg" alt="" class="background">
             <div class="pelicula"></div>
+            
             <div class="texto">
+            <!--
                 <h1>SPT</h1>
                 <p>Sistema para pagamento de transporte</p>
-        </div>
+
+            -->
+            <img src="img/spt_logo.png" alt="" class="logo">
+            </div>
             
         </div>
 
