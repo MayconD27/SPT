@@ -43,7 +43,6 @@ session_start();
     <ul class='list'>
         
         <?php
-            $nome = $_POST['busca'];
             $list= [1,2,3,4,5,6,7,8,9];
             $teste = 0;
             while ($teste<8 ){
@@ -52,7 +51,7 @@ session_start();
                     <li class='infoUser'>
                         <div class='info'>
                             <p>Nome Completo do Usuário</p>
-                            <span> $list[$teste]</span>
+                            <span> 111.111.111-01</span>
                         </div>
                         <a href='index.php'><i class='bi bi-box-arrow-up'></i></a>
                     </li>

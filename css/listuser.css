@@ -19,6 +19,8 @@ footer{
     min-width: 100%;
     margin: 5px 0;
     border: none;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 .buscar .inpB{
     width: 80%;
