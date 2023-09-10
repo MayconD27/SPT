@@ -44,7 +44,7 @@ session_start();
         </div>
 
         <div class="card_func">
-            <a href="cadastro_usuario.php" class="ilustra">
+            <a href="listausuarios.php" class="ilustra">
             <i class="bi bi-filetype-pdf"></i>
             </a>
             <p>Envio de boletos</p>
