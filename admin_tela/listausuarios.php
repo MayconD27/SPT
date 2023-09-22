@@ -53,7 +53,7 @@ session_start();
                             <p>Nome Completo do Usuário</p>
                             <span> 111.111.111-01</span>
                         </div>
-                        <a href='index.php'><i class='bi bi-box-arrow-up'></i></a>
+                        <a href='cadastraArq.php?idUser=$teste'><i class='bi bi-box-arrow-up'></i></a>
                     </li>
                     ";
             }
