@@ -26,6 +26,7 @@
 
         <div class="formulario">
             <h1>SPT</h1>
+            <p>Adicione seus dados de acesso para entrar na plataforma</p>
             <form action="logar.php" method="POST">
                 <label for="email">E-mail: </label>
                 <input type="email" name="email">

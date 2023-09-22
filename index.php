@@ -35,23 +35,10 @@ session_start();
         <a href="logout.php" class="btn_sair"> <i class="bi bi-box-arrow-left"></i> Sair</a>
 
     </nav>
-    <div class="container">
-        <div class="card_func">
-            <a href="cadastro_usuario.php" class="ilustra">
-            <i class="bi bi-person-add"></i>
-            </a>
-            <p>Cadastro de usuário</p>
-        </div>
-
-        <div class="card_func">
-            <a href="listausuarios.php" class="ilustra">
-            <i class="bi bi-filetype-pdf"></i>
-            </a>
-            <p>Envio de boletos</p>
-        </div>
-    </div>
-
-
+    <?php
+        include_once 'admin_tela/homeAdmin.php'
+    ?>
+    
 
 
 

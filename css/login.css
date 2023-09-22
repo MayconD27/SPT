@@ -77,7 +77,7 @@ form input{
     max-width: 450px;
     min-width: 300px;
     margin-bottom: 15px;
-    background-color: #347bff49;
+    background-color: #dce8ff49;
     border: transparent;
     outline: none;
     padding: 10px 5px;
@@ -90,7 +90,13 @@ form input:focus{
     border: #0059ff 1px solid;
     box-shadow: 0px 0px 10px #0059ff;
 }
-
+.formulario p{
+    color: #fff;
+    width: 60%;
+    text-align: center;
+    margin: 5px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
 form label{
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
@@ -105,7 +111,7 @@ form button{
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
-    background: #0059ff;
+    background: #001439;
     color:#fff;
     border: none;
     border-radius: 5px;
