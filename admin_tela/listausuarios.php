@@ -30,9 +30,9 @@ session_start();
         ?>
     </h1>
 
-    <a href="logout.php" class="btn_sair"> <i class="bi bi-box-arrow-left"></i> Sair</a>
+    <a href="logout.php" class="btn_sair"> <i class="bi bi-box-arrow-left"></i></a>
 
-</nav>
+    </nav>
 <form action="listausuarios.php" method="post" class="buscar">
         
         <input type="text" name="busca" placeholder="Nome do usuário" class="inpB">
