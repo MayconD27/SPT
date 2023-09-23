@@ -32,8 +32,8 @@ session_start();
             ?>
         </h1>
 
-        <a href="logout.php" class="btn_sair"> <i class="bi bi-box-arrow-left"></i> Sair</a>
-
+        <a href="logout.php" class="btn_sair"> <i class="bi bi-box-arrow-left"></i></a>
+        <img src="img/spt_logo.png" alt="" class="logo">
     </nav>
     <?php
         include_once 'admin_tela/homeAdmin.php'

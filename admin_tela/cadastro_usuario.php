@@ -9,9 +9,9 @@
 </head>
 <body>
     <h1>Cadastro de usuário</h1>
-    <form action="" method="post">
+    <form action="inseriruser.php" method="post">
          <label for="nome">
-            nome
+            nome completo
          </label>   
         <input type="text" name="nome">
         <label for="cpf">

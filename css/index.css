@@ -8,6 +8,7 @@ h1{
     display: flex;
     background-color: #222;
     justify-content: space-between;
+    flex-direction: row-reverse;
     align-items: center;
     height: 80px;
     box-sizing: border-box;
@@ -15,9 +16,26 @@ h1{
 }
 
 .btn_sair{
-    font-size:18px ;
+    font-size: 35px ;
     text-align: start;
     text-decoration: none;
+    background-color: #222;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    bottom: 25px ;
+    left: 40px;
+    
+
+
+  
+
+
+    
 }
 .container{
     padding: 30px 20px;
@@ -52,4 +70,12 @@ h1{
     font-size: 12px;
     width: 100%;
     margin: 10px auto;
+}
+
+.logo{
+
+    width: 110px;
+    height: 110px;
+    position: fixed;
+    left: 10px;
 }
