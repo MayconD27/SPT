@@ -33,7 +33,7 @@ footer{
 .buscar button{
     width: 20%;
     border: none;
-    background-color: blue;
+    background-color: #007bff;;
     color:#fff;
     font-weight: 600;
     border-radius: 0px 5px  5px 0px;
@@ -69,7 +69,7 @@ footer{
     font-size: 15px;
 }
 .infoUser a{
-    background-color: blue;
+    background-color: #007bff;;
     color:#fff;
     font-weight: 600;
     border-radius: 50%;

@@ -8,17 +8,18 @@
     margin:50px auto;
     border-top: 2px solid #999;
     position: relative;
-    padding: 0 10px;
+    padding: 20px 10px;
 }
 .form_arq p{
     position: absolute;
     background-color: #fff;
     top: -15px;
     color: #007bff;
-    left: 10%;
+    left: 5%;
     font-size: 16px;
     padding: 0 10px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 .info{
     width: 100%;
@@ -27,7 +28,7 @@
 }
 .info p{
     width: 100%;
-    font-size: 2em;
+    font-size: 1.4em;
     font-weight: 600;
 
 }
@@ -81,10 +82,14 @@ label{
     border: none;
     border-radius: 10px;
     color: #fff;
-    margin: 10px 50px;
+    margin: 10px 0px;
 }
 .env_a{
     display: flex;
     justify-content: end;
     width: 100%;
+}
+section{
+    width: 90%;
+    margin: 0 auto;
 }

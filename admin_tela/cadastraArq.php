@@ -29,37 +29,43 @@ session_start();
             $id = $_GET['idUser'];
         }
         
+        $data = date('Y-m-d');
     ?>
-
+    
 <main>
     <nav class="barraNav">
-
-        <a href="logout.php" class="btn_sair"> <i class="bi bi-box-arrow-left"></i></a>
+       <img src="../img/spt_logo.png" alt="img" class="logo">
+        
+        <a href="../logout.php" class="btn_sair"> <i class="bi bi-box-arrow-left"></i></a>
 
     </nav>
-    <div class="info">
-        <p>Nome do usuário</p>
-        <span class="city">
-        <i class="bi bi-pin-map"></i> Cidade
-    </span>
-    </div>
-    <form action="" class="form_arq">
-        <p>Envio de arquivo</p>
-        <div class="d">
-
-            <i class="bi bi-calendar-event"></i><input type="date" disabled value='2023-10-20'class="data">
+    <section>
+        <div class="info">
+            <p>Newton Paula</p>
+            <span class="city">
+                <i class="bi bi-pin-map"></i> Papagaio
+            </span>
         </div>
         
+        <form action="" class="form_arq">
+            <p>Envio de arquivo</p>
+            
+            <div class="d">
+               
+                <i class="bi bi-calendar-event"></i><input type="date" disabled value='<?php echo $data;?>'class="data" name="data">
+            </div>
+            
 
-        <input type="file" class="arq" value="Selecione um arquivo">
-        <label for="file-input" class="custom-file-upload">
-          Adicone o arquivo para ser enviado
-        </label>
-        <div class="env_a">
-            <button type="submit" class="envaqr">Enviar</button>
-        </div>
-        
-    </form>
+            <input type="file" class="arq" value="Selecione um arquivo" name="arq">
+            <label for="file-input" class="custom-file-upload">
+            Adicone o arquivo para ser enviado
+            </label>
+            <div class="env_a">
+                <button type="submit" class="envaqr">Enviar</button>
+            </div>
+            
+        </form>
+    </section>
 
 </main>
 </body>
