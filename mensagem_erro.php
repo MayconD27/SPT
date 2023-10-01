@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Mensagem de Erro</title>
-    <link rel="stylesheet" href="SPT/css/estilo_erro.css">
+    <link rel="stylesheet" href="css/estilo_erro.css">
 </head>
 <body>
     <div>

@@ -26,7 +26,7 @@
         header('location: index.php');
         exit;
     }else{
-        header('location: login.php');
+        header('location: mensagem_erro.php');
         exit;
     }
 ?>
