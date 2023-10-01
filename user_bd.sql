@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27-Ago-2023 às 23:02
+-- Tempo de geração: 01-Out-2023 às 22:12
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 7.4.29
 
@@ -28,18 +28,28 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `user` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `id` int(11) NOT NULL,
   `nome` varchar(50) NOT NULL,
-  `senha` varchar(50) NOT NULL
+  `email` varchar(50) NOT NULL,
+  `cidade` varchar(30) NOT NULL,
+  `bairro` varchar(30) NOT NULL,
+  `rua` varchar(30) NOT NULL,
+  `qntDias` int(11) NOT NULL,
+  `telefone` varchar(15) NOT NULL,
+  `cpf` char(11) NOT NULL,
+  `func` char(1) NOT NULL,
+  `senha` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `user`
 --
 
-INSERT INTO `user` (`id`, `email`, `nome`, `senha`) VALUES
-(1, 'teste@1', 'Teste', '123');
+INSERT INTO `user` (`id`, `nome`, `email`, `cidade`, `bairro`, `rua`, `qntDias`, `telefone`, `cpf`, `func`, `senha`) VALUES
+(1, 'Admin', 'teste@1', '123', 'sada', 'as', 1, 's', '22', '1', '1'),
+(2, '', 't@1', '1', '1', '1', 1, '3123123', '11111111111', '0', '1'),
+(4, 'Thiago', 't@2', '1', '1', '1', 1, '3123123', '22222222', '0', '1'),
+(5, 'Maycon', 'm@1', '1', '1', '1', 1, '1', '333', '0', '1');
 
 --
 -- Índices para tabelas despejadas
@@ -49,7 +59,9 @@ INSERT INTO `user` (`id`, `email`, `nome`, `senha`) VALUES
 -- Índices para tabela `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `cpf` (`cpf`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -59,7 +71,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

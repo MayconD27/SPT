@@ -16,4 +16,5 @@ include_once "../bd.php";
 $sql = "INSERT INTO user VALUE (NULL,'$nome_User','$email_User', '$cidade','$bairro','$rua',$qtd_User,'$telefone_User','$cpf_User','$func','$senha')";
         $resultado = $bd->prepare($sql);
         $registro = $resultado->execute();
+        header('cadastro_usuario.php');
 ?>
