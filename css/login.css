@@ -88,7 +88,7 @@ form input{
 }
 form input:focus{
     border: #0059ff 1px solid;
-    box-shadow: 0px 0px 10px #0059ff;
+    box-shadow: 0px 0px 10px #00A8E8;
 }
 .formulario p{
     color: #fff;

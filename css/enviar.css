@@ -14,7 +14,7 @@
     position: absolute;
     background-color: #fff;
     top: -15px;
-    color: #007bff;
+    color: #00A8E8;
     left: 5%;
     font-size: 16px;
     padding: 0 10px;
@@ -34,11 +34,11 @@
 }
 .info span{
     font-size: 1em;
-    color: #333;
+    color: #00171F;
 }
 .form_arq .arq{
-        background-color: #68686875;
-        color: #fff;
+        background-color: #00c3ff15;
+        color: #000;
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
@@ -54,7 +54,7 @@
     border: none;
     border-radius: 5px;
     background-color: #80808000;
-    color: #333;
+    color: #00171F;
     width: 150px;
     font-size: 15px;
     margin: 0 10px;
@@ -62,7 +62,7 @@
 
 .d {
     display: flex;
-    color: #007bff;
+    color: #00A8E8;
     align-items: center;
     font-size: 25px;
     width: 100%;
@@ -73,12 +73,12 @@
 label{
     text-align: end;
     width: 100%;
-    color: #0c81ff;
+    color: #00A8E8 ;
 }
 .envaqr{
     width: 200px;
     height: 50px;
-    background-color: #007bff;
+    background-color: #00A8E8;
     border: none;
     border-radius: 10px;
     color: #fff;
