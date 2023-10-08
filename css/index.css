@@ -13,6 +13,9 @@ h1{
     height: 90px;
     box-sizing: border-box;
     padding: 0 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .btn_sair{
@@ -39,6 +42,7 @@ h1{
     justify-content: center;
     box-sizing: border-box;
     flex-wrap: wrap;
+    margin: 10% auto;
 
 }
 .ilustra{
@@ -96,3 +100,11 @@ h1 i{
     font-size: 30px;
     padding: 0;
 }
+@media only screen and (max-width: 900px) {
+    .container,form{
+        margin: 20% auto;
+    }
+    .container_user{
+        margin: 10% auto;
+    }
+   }

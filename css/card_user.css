@@ -4,7 +4,7 @@
 }
 form{
     display: flex;
-    margin: 50px auto;
+    margin: 8% auto;
     flex-direction: column;
     width: 80%;
     padding: 10px 20px;
@@ -84,4 +84,7 @@ h2{
     justify-content: center;
     flex-direction: column;
 
+}
+@media screen {
+    
 }
