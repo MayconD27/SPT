@@ -1,0 +1,46 @@
+.lote{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    flex-wrap: wrap;
+    margin: 8% auto;
+;
+}
+.card{
+    min-width: 300px;
+    max-width: 800px;
+    width: 80vw;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px #0000003c;
+    padding: 30px 10px;
+    margin: 10px auto;
+}
+.card select{
+    background-color: #00aeff19;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    min-width: 120px;
+    cursor: pointer;
+}
+
+button{
+    border: none;
+    background-color: #00A8E8;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 20px 30px;
+    margin-top: 15px;
+}
+
+.btne{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
