@@ -30,10 +30,12 @@ session_start();
         <h1>
             <?php echo "$nomeUsuario"; 
             ?>
+            <i class="bi bi-person-circle"></i>
         </h1>
 
         <a href="logout.php" class="btn_sair"> <i class="bi bi-box-arrow-left"></i></a>
-        <img src="img/spt_logo.png" alt="" class="logo">
+        <a href="index.php" class="logo"><img src="img/spt_logo.png" alt=""></a>
+        
     </nav>
     <?php
         include_once 'admin_tela/homeAdmin.php'

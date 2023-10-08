@@ -26,10 +26,13 @@ session_start();
     <nav class="barraNav">
 
     <h1>
-        <?php echo "$nomeUsuario"; 
-        ?>
+            <?php 
+                echo "$nomeUsuario"; 
+            ?>
+            <i class="bi bi-person-circle"></i>
     </h1>
-
+    <a href="../index.php" class="logo"><img src="../img/spt_logo.png" alt=""></a>
+    <a href="../index.php" class="return"><i class="bi bi-arrow-left-short"></i></a>
     <a href="logout.php" class="btn_sair"> <i class="bi bi-box-arrow-left"></i></a>
 
     </nav>
