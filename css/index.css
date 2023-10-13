@@ -102,7 +102,7 @@ h1 i{
 }
 @media only screen and (max-width: 900px) {
     .container,form{
-        margin: 20% auto;
+        margin: 15% auto;
     }
     .container_user{
         margin: 10% auto;

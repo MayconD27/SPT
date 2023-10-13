@@ -1,5 +1,5 @@
 <?php
-
+include_once "../bd.php";
 session_start();
     $usuarioLogado = isset($_SESSION['logado']) ?  $_SESSION['logado'] : false;
 
@@ -40,33 +40,40 @@ session_start();
         
         <input type="text" name="busca" placeholder="Nome do usuário" class="inpB">
         <button type="submit">Buscar <i class="bi bi-search"></i></button>
-    </form>
+</form>
 <section class="container_user">
 
     <ul class='list'>
         
         <?php
-            $list= [1,2,3,4,5,6,7,8,9];
-            $teste = 0;
-            while ($teste<8 ){
-                $teste++;
-                echo  "
-                    <li class='infoUser'>
-                        <div class='info'>
-                            <p>Nome Completo do Usuário</p>
-                            <span> 111.111.111-01</span>
-                        </div>
-                        <a href='cadastraArq.php?idUser=$teste'><i class='bi bi-box-arrow-up'></i></a>
-                    </li>
-                    ";
+            if (isset($_POST['busca'])) {
+                $busca = $_POST['busca'];
+                $sql = "SELECT * FROM user WHERE UPPER(nome) LIKE '%$busca%' AND func != 1";
             }
+            else{
+                $sql = "SELECT * FROM user WHERE func != 1";
+            }
+           
+                    
             
+            $resultado = $bd->query($sql);
+            $registros = $resultado->fetchAll();
+            foreach ($registros as $usuarios) {
+                $nome =$usuarios['nome']; 
+                $id = $usuarios['id'];
+                $cpf = $usuarios['cpf'];
+                echo "<li class='infoUser'>
+                        <div class='info'>
+                            <p>$nome</p>
+                            <span> $cpf</span>
+                        </div>
+                        <a href='cadastraArq.php?idUser=$id'><i class='bi bi-box-arrow-up'></i></a>
+                        </li>";
+            } 
+    
         ?>
 
     </ul>
 </section>
-<footer>
-    &copy2023
-</footer>
 </body>
 </html>
