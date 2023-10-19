@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+include_once "../bd.php";
     $usuarioLogado = isset($_SESSION['logado']) ?  $_SESSION['logado'] : false;
 
     if($usuarioLogado== false){
@@ -9,6 +10,7 @@ session_start();
     }
     $nomeUsuario = isset($_SESSION['nome']) ?  $_SESSION['nome'] : 'Sem nome';
     $id = $_SESSION['id'];
+
 ?>
 
 <!DOCTYPE html>
@@ -47,13 +49,22 @@ session_start();
         
     </nav>
     <section>
+    <?php
+         $sql = "SELECT * FROM user WHERE id = $id";
+         $resultado = $bd->query($sql);
+         $registros = $resultado->fetchAll();
+         $nome = $registros[0]['nome'];
+         $cidade = $registros[0]['cidade'];
+        ?>
+           
+
         <div class="info">
-            <p>Newton Paula</p>
+            <p><?php echo $nome;?></p>
             <span class="city">
-                <i class="bi bi-pin-map"></i> Papagaio
+                <i class="bi bi-pin-map"></i> <?php echo $cidade;?>
             </span>
         </div>
-        
+
         <form action="" class="form_arq">
             <p>Envio de arquivo</p>
             
