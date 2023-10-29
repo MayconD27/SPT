@@ -49,15 +49,18 @@ session_start();
             if (isset($_POST['busca'])) {
                 $busca = $_POST['busca'];
                 $sql = "SELECT * FROM user WHERE UPPER(nome) LIKE '%$busca%' AND func != 1";
+                
             }
             else{
                 $sql = "SELECT * FROM user WHERE func != 1";
+                
             }
            
                     
             
             $resultado = $bd->query($sql);
             $registros = $resultado->fetchAll();
+            
             foreach ($registros as $usuarios) {
                 $nome =$usuarios['nome']; 
                 $id = $usuarios['id'];
