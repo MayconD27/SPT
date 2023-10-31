@@ -36,7 +36,6 @@
     flex-wrap: wrap;
     overflow: auto;
     margin: 8% auto;
-
 }
 .card_bole span{
     color: #ffffffb5;
@@ -53,6 +52,6 @@
         margin: 10% auto;
     }
     .container_bole{
-        margin: 18% auto;
+        margin: 23% auto;
     }
    }
