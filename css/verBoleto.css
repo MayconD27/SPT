@@ -1,0 +1,58 @@
+.card_bole{
+    background-color: #00171F;
+    width: 60%;
+    padding: 10px;
+    height: 80px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 10px 5px 10px #00000025;
+    margin-top: 10px;
+    min-width: 300px;
+    
+
+}
+.card_bole p{
+    color: #fff;
+    border-bottom: #00A8E8 1px solid;
+    width: 80%;
+    padding-bottom: 2px;
+}
+.card_bole a{
+    color: #00A8E8;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    font-size: 20px;
+}
+.container_bole{
+    height: 75vh;
+    padding: 30px 20px;
+    display: flex;
+    width: 80%;
+    align-items: center;
+    min-height: 60vh;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    overflow: auto;
+    margin: 8% auto;
+
+}
+.card_bole span{
+    color: #ffffffb5;
+    position: absolute;
+    right: calc(5% + 30px);
+    bottom: 15%;
+    font-size: 12px;
+}
+@media only screen and (max-width: 900px) {
+    .container,form{
+        margin: 15% auto;
+    }
+    .container_user{
+        margin: 10% auto;
+    }
+    .container_bole{
+        margin: 18% auto;
+    }
+   }
