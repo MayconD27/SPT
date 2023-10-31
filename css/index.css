@@ -113,3 +113,16 @@ h1 i{
         margin: 50% auto;
     }
    }
+
+   *::-webkit-scrollbar {
+    width: 8px;             
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;    
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #00171F;   
+    border-radius: 20px;      
+  }
