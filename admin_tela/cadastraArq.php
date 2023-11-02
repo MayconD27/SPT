@@ -25,6 +25,7 @@ include_once "../bd.php";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/enviar.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <?php
@@ -65,13 +66,31 @@ include_once "../bd.php";
             </span>
         </div>
 
-        <form action="enviaArq.php" class="form_arq" enctype="multipart/form-data" method="POST" > 
-            
-            <p>Envio de arquivo</p>
+        <form action="" class="form_arq" enctype="multipart/form-data" method="POST" > 
+            <?php
+                if(isset($_POST['envia'])){
+                    $arquivo = $_FILES["arq"];
+                    $extensao = pathinfo($arquivo['name'], PATHINFO_EXTENSION);
+                
+                    if ($extensao != 'pdf') {
+                        echo "<script src='../js/alertErro.js'></script>";
+                    } else {
+                        echo "<script src='../js/alertOk.js'></script>";
+                        move_uploaded_file($arquivo['tmp_name'], '../arquivos/' . $arquivo['name']);
+                        $caminho_arquivo = '../arquivos/' . $arquivo['name'];
+                        echo "$caminho_arquivo";
+                    }
+                }
+        ?>
+        
+        <p>Envio de arquivo</p>
             
             <div class="d">
                
                 <i class="bi bi-calendar-event"></i><input type="date" disabled value='<?php echo $data;?>'class="data" name="data">
+                <select name="" id="">
+                    <option value="Janeiro">Janeiro</option>
+                </select>
             </div>
             
 

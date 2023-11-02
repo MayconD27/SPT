@@ -98,3 +98,12 @@ section{
         margin: 25% auto;
     }
    }
+
+   .erro{
+    background-color: red;
+    color: #fff;
+    position: fixed;
+    bottom: 10px;
+    width: 200px;
+    font-size: 15px;
+   }
