@@ -65,7 +65,8 @@ include_once "../bd.php";
             </span>
         </div>
 
-        <form action="" class="form_arq">
+        <form action="enviaArq.php" class="form_arq" enctype="multipart/form-data" method="POST" > 
+            
             <p>Envio de arquivo</p>
             
             <div class="d">
@@ -79,7 +80,7 @@ include_once "../bd.php";
             Adicone o arquivo para ser enviado
             </label>
             <div class="env_a">
-                <button type="submit" class="envaqr">Enviar</button>
+                <button type="submit" class="envaqr" name="envia">Enviar</button>
             </div>
             
         </form>
