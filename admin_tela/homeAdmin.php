@@ -20,6 +20,13 @@
             </a>
             <p>Envio de boletos</p>
         </div>
+
+        <div class="card_func">
+            <a href="admin_tela/envioLote.php" class="ilustra">
+            <i class="bi bi-folder-symlink-fill"></i>
+            </a>
+            <p>Envio em lote</p>
+        </div>
     </div>
 </body>
 </html>

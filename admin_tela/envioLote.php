@@ -9,30 +9,47 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/lote.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+<?php
+
+session_start();
+    $usuarioLogado = isset($_SESSION['logado']) ?  $_SESSION['logado'] : false;
+
+    if($usuarioLogado== false){
+        header('location: login.php');
+        exit;
+    }
+    $nomeUsuario = isset($_SESSION['nome']) ?  $_SESSION['nome'] : 'Sem nome';
+    $id = $_SESSION['id'];
+?>
 <body>
     <nav class="barraNav">
         <h1>
             <?php 
-                echo 'admin'; 
+               echo "$nomeUsuario";
             ?>
             <i class="bi bi-person-circle"></i>
         </h1>
         <a href="../index.php" class="logo"><img src="../img/spt_logo.png" alt=""></a>
         <a href="../logout.php" class="btn_sair"> <i class="bi bi-box-arrow-left"></i></a>
-        <a href="listausuarios.php" class="return"><i class="bi bi-arrow-left-short"></i></a>
+        <a href="../index.php" class="return"><i class="bi bi-arrow-left-short"></i></a>
         
     </nav> 
     <main class="lote">
-        <form action="" method="post" id="form">
-
+        <form action="./enviarEmLote.php" method="post" id="form" enctype="multipart/form-data">
+        <input type="date" name="" id="" style="display:none"> 
+        <h2>Informe os dados de envio</h2>
+        <div class="data">
+              
+                <select name="data_bol" id="">
+                    <option value="janeiro">Janeiro</option>
+                </select>
+                <input type="number" name="ano" class="input_ano" placeholder="Digite o ano">
+        </div>
             <div class="campo" id="campo">
                 <div class="card">
-                    <input type="file" name="arq1" id="">
-                    <select name="" id="select">
-                        <option value="Maycon">Maycon</option>
-                        <option value="Douglas"> Douglas</option>
-                    </select>
+                    <input input title = "Carregue apenas arquivos PDF" name="Documento[]" id="Documento" type="file"  placeholder="" multiple>
                 </div>
                 
             </div>
@@ -41,14 +58,8 @@
                 <button type="submit" class="envia">Enviar Arquivos</button>
             </div>
         </form>
-
-        
-        <button id="add">Adicionar a lista</button>
-    
-  
     </main>
         
 
-<script src="../js/enviolote.js"></script>
 </body>
 </html>
