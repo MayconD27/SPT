@@ -37,13 +37,17 @@ session_start();
         
     </nav> 
     <main class="lote">
+        <?php
+             $data = date('Y-m-d');
+        ?>
         <form action="./enviarEmLote.php" method="post" id="form" enctype="multipart/form-data">
-        <input type="date" name="" id="" style="display:none"> 
+        <input type="date" name="data_atual" id="" style="display:none" value='<?php echo $data;?>'> 
         <h2>Informe os dados de envio</h2>
         <div class="data">
               
                 <select name="data_bol" id="">
                     <option value="janeiro">Janeiro</option>
+                    <option value="fevereiro">Fevereiro</option>
                 </select>
                 <input type="number" name="ano" class="input_ano" placeholder="Digite o ano">
         </div>

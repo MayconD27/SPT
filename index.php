@@ -1,5 +1,5 @@
 <?php
-
+include_once './bd.php';
 session_start();
     $usuarioLogado = isset($_SESSION['logado']) ?  $_SESSION['logado'] : false;
 
@@ -40,7 +40,7 @@ session_start();
         
     </nav>
     <?php
-        include_once 'admin_tela/homeAdmin.php';
+        include_once 'user_tela/homeUser.php';
     ?>
     
 

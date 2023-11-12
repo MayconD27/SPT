@@ -18,6 +18,10 @@ include './pdfparser/vendor/autoload.php';
 include '../bd.php';
 $Documento= array();
 
+$mes = $_POST['data_bol'];
+$ano = $_POST['ano'];
+$dataBol = "$mes $ano";
+$dataAtual = $_POST['data_atual'];
 //Variável para receber a ultima aliquota
 $UltAliquota = 0;
 
@@ -28,15 +32,26 @@ $Tam  = count($_FILES['Documento']['tmp_name']);
 
 for($cont = ($Tam-1);$cont>=0;$cont--){
     //Recebe os valores do PDF
-    $Doc=BuscaDadosPDF($_FILES['Documento']['tmp_name'][$cont]);
+    $cpf=BuscaDadosPDF($_FILES['Documento']['tmp_name'][$cont]);
     $docs = $_FILES['Documento']['name'][$cont];
-    $caminho_arquivo = '../arquivos/' . $docs;
+    $caminho_arquivo ='../arquivos/' . $docs;
+
+    $cpf = (int) $cpf;
+    $sqlSel = "SELECT id FROM user WHERE cpf = $cpf";
+    $resultadoCpf = $bd->query($sqlSel);
+    $registroCpf = $resultadoCpf->fetch();
+
+    $NumCpf = $registroCpf['id'];
+    
+    
+    
     move_uploaded_file($_FILES['Documento']['tmp_name'][$cont],$caminho_arquivo);
 
-    $sql = "INSERT INTO arquivos VALUE (NULL,'$caminho_arquivo','novembro 2023', '2023-11-09',1)";
+    $sql = "INSERT INTO arquivos VALUE (NULL,'$caminho_arquivo','$dataBol', '$dataAtual',$NumCpf)";
     $resultado = $bd->prepare($sql);
     $registro = $resultado->execute();
     echo "<script src='../js/alertEnvioArq.js'></script>";
+
 }
 
 ?>
@@ -60,7 +75,8 @@ for($cont = ($Tam-1);$cont>=0;$cont--){
             $x = str_replace("\t", "*", $linha);
             $x = explode('*',end($x));
             $cpf = $x[1];
-            
+            $cpf = str_replace(".", "", $cpf);
+            $cpf = str_replace("-","",$cpf);
 			return($cpf);
 
         }
