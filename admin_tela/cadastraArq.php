@@ -24,6 +24,7 @@ include_once "../bd.php";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/lote.css">
     <link rel="stylesheet" href="../css/enviar.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -65,9 +66,7 @@ include_once "../bd.php";
                 <i class="bi bi-pin-map"></i> <?php echo $cidade;?>
             </span>
         </div>
-
-        <form action="" class="form_arq" enctype="multipart/form-data" method="POST" > 
-            <?php
+        <?php
                 if(isset($_POST['envia'])){
                     $arquivo = $_FILES["arq"];
                     $extensao = pathinfo($arquivo['name'], PATHINFO_EXTENSION);
@@ -81,27 +80,38 @@ include_once "../bd.php";
                         echo "$caminho_arquivo";
                     }
                 }
-        ?>
-        
-        <p>Envio de arquivo</p>
-            
-            <div class="d">
-               
-                <i class="bi bi-calendar-event"></i><input type="date" disabled value='<?php echo $data;?>'class="data" name="data">
-                <select name="" id="">
-                    <option value="Janeiro">Janeiro</option>
+        ?>        
+        <form action="./enviarEmLote.php" method="post" id="form">
+            <input type="date" name="data_atual" id="" style="display:none" value='<?php echo $data;?>'> 
+            <h2>Informe os dados de envio</h2>
+            <div class="data">
+              
+                <select name="data_bol" id="">
+                    <option value="janeiro">Janeiro</option>
+                    <option value="fevereiro">Fevereiro</option>
+                    <option value="março">Março</option>
+                    <option value="abril">Abril</option>
+                    <option value="maio">Maio</option>
+                    <option value="junho">Junho</option>
+                    <option value="julho">Julho</option>
+                    <option value="agosto">Agosto</option>
+                    <option value="setembro">Setembro</option>
+                    <option value="outubro">Outubro</option>
+                    <option value="novembro">Novembro</option>
+                    <option value="dezembro">Dezembro</option>
                 </select>
+                <input type="number" name="ano" class="input_ano" placeholder="Digite o ano">
+        </div>
+            <div class="campo" id="campo">
+                <div class="card">
+                    <input input title = "Carregue apenas arquivos PDF" name="arq" id="Documento" type="file"  placeholder="">
+                </div>
+                
             </div>
+            <div class="btne">
             
-
-            <input type="file" class="arq" value="Selecione um arquivo" name="arq">
-            <label for="file-input" class="custom-file-upload">
-            Adicone o arquivo para ser enviado
-            </label>
-            <div class="env_a">
-                <button type="submit" class="envaqr" name="envia">Enviar</button>
+                <button type="submit" class="envia">Enviar Arquivos</button>
             </div>
-            
         </form>
     </section>
 

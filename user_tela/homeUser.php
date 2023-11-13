@@ -19,7 +19,7 @@
         foreach ($registros as $bol) {
             $dataBol = $bol['data_bol'];
             $caminhoArq = $bol['pdf'];
-            $caminhoArq = str_replace('..','.',$caminhoArq);
+            $caminhoArq = str_replace('../','./',$caminhoArq);
 
             echo "<div class='card_bole'>";
             echo "<p><i class='bi bi-file-earmark-binary-fill'></i> BOLETO $dataBol</p>";
