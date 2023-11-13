@@ -9,6 +9,16 @@ session_start();
     }
     $nomeUsuario = isset($_SESSION['nome']) ?  $_SESSION['nome'] : 'Sem nome';
     $id = $_SESSION['id'];
+
+    $sql = "SELECT * FROM user WHERE id = $id";
+    $resultado = $bd->query($sql);
+    $registros = $resultado->fetchAll();
+    
+    $func_user = $registros[0]['func'];
+    echo $func_user;
+    
+
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +33,7 @@ session_start();
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/verBoleto.css">
     <link rel="stylesheet" href="css/trava.css">
-    <link rel="shortcut icon" href="../img/spt_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/spt_logo.png" type="image/x-icon">
 </head>
 <body>
     
@@ -41,7 +51,13 @@ session_start();
         
     </nav>
     <?php
-        include_once 'admin_tela/homeAdmin.php';
+        if($func_user==1){
+            include_once 'admin_tela/homeAdmin.php';
+        }
+        else{
+            include_once 'user_tela/homeUser.php';
+        }
+        
     ?>
     
 
