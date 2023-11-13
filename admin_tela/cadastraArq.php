@@ -27,6 +27,7 @@ include_once "../bd.php";
     <link rel="stylesheet" href="../css/lote.css">
     <link rel="stylesheet" href="../css/enviar.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="shortcut icon" href="../img/spt_logo.png" type="image/x-icon">
 </head>
 <body>
     <?php

@@ -23,6 +23,7 @@ session_start();
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/verBoleto.css">
     <link rel="stylesheet" href="css/trava.css">
+    <link rel="shortcut icon" href="../img/spt_logo.png" type="image/x-icon">
 </head>
 <body>
     

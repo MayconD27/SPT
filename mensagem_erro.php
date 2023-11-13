@@ -3,6 +3,7 @@
 <head>
     <title>Mensagem de Erro</title>
     <link rel="stylesheet" href="css/estilo_erro.css">
+    <link rel="shortcut icon" href="../img/spt_logo.png" type="image/x-icon">
 </head>
 <body>
     <div>
