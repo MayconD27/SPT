@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php
                 include_once '../bd.php';
                     $arquivo = $_FILES["arq"];
@@ -19,6 +20,20 @@
                         $resultado = $registro->execute();
 
                         echo "<script src='../js/alertOk.js'></script>";
-                        echo "$caminho_arquivo";
                     }
 ?> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/telaRetorno.css">
+</head>
+<body>
+<h1>Seu envio foi bem sucedido</h1>
+        <img src="../img/Bus Stop-pana.svg" alt="">
+        <a href="./envioLote.php"><i class="bi bi-arrow-left-circle-fill"></i>   Retornar para a tela de envio em lote</a>
+    
+</body>
+</html>
