@@ -67,23 +67,10 @@ include_once "../bd.php";
                 <i class="bi bi-pin-map"></i> <?php echo $cidade;?>
             </span>
         </div>
-        <?php
-                if(isset($_POST['envia'])){
-                    $arquivo = $_FILES["arq"];
-                    $extensao = pathinfo($arquivo['name'], PATHINFO_EXTENSION);
-                
-                    if ($extensao != 'pdf') {
-                        echo "<script src='../js/alertErro.js'></script>";
-                    } else {
-                        echo "<script src='../js/alertOk.js'></script>";
-                        move_uploaded_file($arquivo['tmp_name'], '../arquivos/' . $arquivo['name']);
-                        $caminho_arquivo = '../arquivos/' . $arquivo['name'];
-                        echo "$caminho_arquivo";
-                    }
-                }
-        ?>        
-        <form action="./enviarEmLote.php" method="post" id="form">
-            <input type="date" name="data_atual" id="" style="display:none" value='<?php echo $data;?>'> 
+       
+        <form action="./enviaArq.php" method="POST" id="form" enctype="multipart/form-data">
+            <input type="date" name="data_atual" id="" value='<?php echo $data;?>' style="display:none"> 
+            <input type="number" name="id" id="" value='<?php echo $id;?>' style="display:none">
             <h2>Informe os dados de envio</h2>
             <div class="data">
               
@@ -105,7 +92,7 @@ include_once "../bd.php";
         </div>
             <div class="campo" id="campo">
                 <div class="card">
-                    <input input title = "Carregue apenas arquivos PDF" name="arq" id="Documento" type="file"  placeholder="">
+                    <input title = "Carregue apenas arquivos PDF" name="arq" id="Documento" type="file"  placeholder="">
                 </div>
                 
             </div>

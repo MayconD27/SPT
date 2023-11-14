@@ -9,12 +9,6 @@
 date_default_timezone_set('America/Sao_Paulo');
 setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 
-/* Informa o nível dos erros que serão exibidos */
-//  error_reporting(E_ALL);
-
-/* Habilita a exibição de erros */
-//  ini_set("display_errors", 1);
-
 include './pdfparser/vendor/autoload.php';
 include '../bd.php';
 $Documento= array();

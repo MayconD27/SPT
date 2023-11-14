@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="../img/spt_logo.png" type="image/x-icon">
 </head>
 <?php
-
+include_once '../bd.php';
 session_start();
     $usuarioLogado = isset($_SESSION['logado']) ?  $_SESSION['logado'] : false;
 
@@ -23,6 +23,16 @@ session_start();
     }
     $nomeUsuario = isset($_SESSION['nome']) ?  $_SESSION['nome'] : 'Sem nome';
     $id = $_SESSION['id'];
+    
+    $sqlValidar = "SELECT func FROM user WHERE id = $id";
+    $registro = $bd->query($sqlValidar);
+    $resultado = $registro->fetchAll();
+
+    $resultValidar = $resultado[0]['func'];
+
+    if($resultValidar!=1){
+        header('location: ../index.php');
+    }
 ?>
 <body>
     <nav class="barraNav">
