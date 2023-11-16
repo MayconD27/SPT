@@ -10,7 +10,14 @@ include_once "../bd.php";
     }
     $nomeUsuario = isset($_SESSION['nome']) ?  $_SESSION['nome'] : 'Sem nome';
     $id = $_SESSION['id'];
-
+    
+    $sqlValidar = "SELECT func FROM user WHERE id = $id";
+    $registro = $bd->query($sqlValidar);
+    $resultado = $registro->fetchAll();    
+    $resultValidar = $resultado[0]['func'];
+    if($resultValidar!=1){
+        header('location: ../index.php');
+    }    
 ?>
 
 <!DOCTYPE html>

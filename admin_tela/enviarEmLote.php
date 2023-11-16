@@ -4,6 +4,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/telaRetorno.css">
     <link rel="shortcut icon" href="../img/spt_logo.png" type="image/x-icon">
+
+<?php
+include_once '../bd.php';
+session_start();
+    $usuarioLogado = isset($_SESSION['logado']) ?  $_SESSION['logado'] : false;
+
+    if($usuarioLogado== false){
+        header('location: login.php');
+        exit;
+    }
+    $id = $_SESSION['id'];
+    
+    $sqlValidar = "SELECT func FROM user WHERE id = $id";
+    $registro = $bd->query($sqlValidar);
+    $resultado = $registro->fetchAll();
+
+    $resultValidar = $resultado[0]['func'];
+
+    if($resultValidar!=1){
+        header('location: ../index.php');
+    }
+?>
+
+
 <?php
 
 date_default_timezone_set('America/Sao_Paulo');

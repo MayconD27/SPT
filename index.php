@@ -10,7 +10,7 @@ session_start();
     $nomeUsuario = isset($_SESSION['nome']) ?  $_SESSION['nome'] : 'Sem nome';
     $id = $_SESSION['id'];
 
-    $sql = "SELECT * FROM user WHERE id = $id";
+    $sql = "SELECT func FROM user WHERE id = $id";
     $resultado = $bd->query($sql);
     $registros = $resultado->fetchAll();
     
@@ -51,15 +51,14 @@ session_start();
         
     </nav>
     <?php
-        if($func_user==1){
-            include_once 'admin_tela/homeAdmin.php';
+        if($func_user!=1){
+            include_once 'user_tela/homeUser.php';
         }
         else{
-            include_once 'user_tela/homeUser.php';
+            include_once 'admin_tela/homeAdmin.php';
         }
         
     ?>
-    
 
 
 
